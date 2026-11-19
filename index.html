@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#172b3a">
+  <meta name="description" content="Geodelta Group: construcción de obra pública y privada, proyectos, planos, remodelaciones y mantenimiento en Colima, México.">
+  <title>Geodelta Group | Construimos espacios, desarrollamos futuro</title>
+  <style>
+    :root{--ink:#172b3a;--muted:#61717d;--blue:#315b70;--pale:#edf2f4;--line:#dce4e8;--white:#fff;--accent:#c6a36a}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:#fff;line-height:1.6}
+    a{color:inherit;text-decoration:none}.wrap{width:min(1120px,calc(100% - 40px));margin:auto}
+    header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+    .nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.11em;font-size:1rem}.mark{width:38px;height:38px;border:2px solid var(--blue);display:grid;place-items:center;position:relative}.mark:before,.mark:after{content:"";position:absolute;background:var(--accent)}.mark:before{width:2px;height:25px}.mark:after{height:2px;width:25px}.mark span{font-size:0}.brand small{display:block;font-size:.57rem;letter-spacing:.24em;color:var(--muted);font-weight:600;margin-top:-3px}
+    nav{display:flex;align-items:center;gap:27px;font-size:.88rem;color:#40515c}nav a:hover{color:var(--blue)}.nav-cta{background:var(--ink);color:white;padding:11px 17px;border-radius:3px;font-weight:650}
+    .menu{display:none;border:1px solid var(--line);background:white;border-radius:3px;padding:8px 11px;color:var(--ink);font-size:1.2rem}
+    .hero{background:linear-gradient(112deg,#142b3a 0%,#234457 58%,#315b70 100%);color:white;overflow:hidden;position:relative}
+    .hero:after{content:"";position:absolute;width:560px;height:560px;border:1px solid rgba(255,255,255,.12);border-radius:50%;right:-130px;top:-150px;box-shadow:0 0 0 55px rgba(255,255,255,.025),0 0 0 110px rgba(255,255,255,.02)}
+    .hero-inner{min-height:590px;display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:50px;padding-top:70px;padding-bottom:70px;position:relative;z-index:1}
+    .eyebrow{font-size:.75rem;letter-spacing:.22em;text-transform:uppercase;color:#d5bc91;font-weight:700}.hero h1{font-size:clamp(2.7rem,5.3vw,5rem);line-height:1.04;letter-spacing:-.045em;margin:20px 0 22px;max-width:700px}.hero p{color:#d4dfe4;font-size:1.08rem;max-width:550px;margin:0 0 32px}.actions{display:flex;gap:13px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 20px;border-radius:3px;font-weight:700;font-size:.9rem;transition:.2s}.btn-light{background:white;color:var(--ink)}.btn-outline{border:1px solid rgba(255,255,255,.5);color:white}.btn:hover{transform:translateY(-2px)}
+    .hero-art{min-height:370px;position:relative;display:grid;place-items:center}.blueprint{width:min(100%,440px);aspect-ratio:1.05;border:1px solid rgba(255,255,255,.25);position:relative;background:linear-gradient(135deg,rgba(255,255,255,.08),rgba(255,255,255,.015));transform:rotate(-4deg);box-shadow:25px 25px 0 rgba(0,0,0,.08)}.blueprint:before{content:"";position:absolute;inset:12%;border:1px solid rgba(255,255,255,.55)}.blueprint:after{content:"";position:absolute;left:12%;right:12%;top:50%;height:1px;background:rgba(255,255,255,.4);box-shadow:0 -92px 0 rgba(255,255,255,.25),0 92px 0 rgba(255,255,255,.25)}
+    .bp-grid{position:absolute;inset:12%;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:12px;padding:18px}.bp-grid i{border:1px solid rgba(255,255,255,.5);display:block;position:relative}.bp-grid i:nth-child(2),.bp-grid i:nth-child(3){background:rgba(198,163,106,.13)}.bp-caption{position:absolute;bottom:20px;left:22px;color:#d7e0e4;font-size:.7rem;letter-spacing:.18em;text-transform:uppercase}
+    section{padding:92px 0}.section-top{max-width:680px;margin-bottom:42px}.section-top .eyebrow{color:var(--blue)}h2{font-size:clamp(2rem,3.5vw,3.1rem);line-height:1.12;letter-spacing:-.035em;margin:12px 0 16px}.section-top p{color:var(--muted);margin:0;font-size:1.02rem}
+    .about{display:grid;grid-template-columns:.9fr 1.1fr;gap:80px;align-items:center}.about-panel{background:var(--pale);padding:42px;min-height:310px;position:relative;overflow:hidden}.about-panel:before{content:"G";font-size:19rem;line-height:1;font-weight:800;color:rgba(49,91,112,.07);position:absolute;right:-5px;bottom:-70px}.about-panel strong{font-size:1.15rem;max-width:230px;display:block;position:relative}.about-panel span{display:block;color:var(--blue);font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;margin-top:25px;position:relative}.about-copy p{color:var(--muted)}
+    .services{background:#f6f8f9}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.service{background:white;border:1px solid var(--line);padding:29px;min-height:220px;transition:.2s}.service:hover{transform:translateY(-4px);box-shadow:0 15px 35px rgba(23,43,58,.08)}.num{font-size:.75rem;color:var(--accent);letter-spacing:.12em;font-weight:800}.service h3{font-size:1.18rem;margin:22px 0 9px}.service p{font-size:.92rem;color:var(--muted);margin:0}.icon{width:38px;height:38px;border:1px solid var(--line);display:grid;place-items:center;color:var(--blue);font-size:1.15rem}
+    .approach{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:start}.steps{border-top:1px solid var(--line)}.step{display:grid;grid-template-columns:55px 1fr;gap:15px;padding:22px 0;border-bottom:1px solid var(--line)}.step b{color:var(--accent);font-size:.85rem}.step h3{margin:0 0 5px;font-size:1.05rem}.step p{margin:0;color:var(--muted);font-size:.92rem}
+    .contact{background:var(--ink);color:white}.contact .eyebrow{color:#d5bc91}.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}.contact p{color:#cbd6dc;max-width:470px}.contact-items{display:grid;gap:13px}.contact-item{border:1px solid rgba(255,255,255,.18);padding:18px 20px;display:flex;gap:14px;align-items:center}.contact-item small{display:block;color:#aebdc5;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase}.contact-item strong{font-size:.98rem;overflow-wrap:anywhere}.contact-item .symbol{color:#d5bc91;font-size:1.1rem;width:22px}
+    footer{background:#10212d;color:#aebdc5;padding:25px 0;font-size:.8rem}.footer-inner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.footer-inner strong{color:white;letter-spacing:.1em}
+    .wa-float{position:fixed;right:22px;bottom:22px;z-index:20;background:#1c8b58;color:#fff;border-radius:50px;padding:13px 18px;font-size:.85rem;font-weight:750;box-shadow:0 8px 25px #0003}
+    @media(max-width:800px){nav{display:none;position:absolute;top:76px;left:0;right:0;background:white;border-bottom:1px solid var(--line);padding:18px 22px 24px;flex-direction:column;align-items:stretch;gap:18px}.menu{display:block}.nav.open nav{display:flex}.nav-cta{text-align:center}.hero-inner{grid-template-columns:1fr;min-height:auto;padding-top:75px;padding-bottom:60px;gap:25px}.hero-art{min-height:280px}.blueprint{width:75%;}.about,.approach,.contact-grid{grid-template-columns:1fr;gap:35px}.cards{grid-template-columns:repeat(2,1fr)}section{padding:70px 0}}
+    @media(max-width:520px){.wrap{width:min(100% - 32px,1120px)}.hero h1{font-size:2.65rem}.cards{grid-template-columns:1fr}.service{min-height:unset}.about-panel{min-height:240px;padding:30px}.contact-grid{gap:25px}.wa-float{right:14px;bottom:14px}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap nav" id="nav">
+    <a class="brand" href="#inicio" aria-label="Geodelta Group, inicio"><span class="mark"><span>G</span></span><span>GEODELTA<small>GROUP · CONSTRUCCIÓN</small></span></a>
+    <button class="menu" aria-label="Abrir menú" onclick="document.getElementById('nav').classList.toggle('open')">☰</button>
+    <nav aria-label="Navegación principal">
+      <a href="#empresa" onclick="closeMenu()">La empresa</a><a href="#servicios" onclick="closeMenu()">Servicios</a><a href="#proceso" onclick="closeMenu()">Cómo trabajamos</a><a href="#contacto" class="nav-cta" onclick="closeMenu()">Contáctanos</a>
+    </nav>
+  </div>
+</header>
+<main>
+  <section class="hero" id="inicio">
+    <div class="wrap hero-inner">
+      <div>
+        <div class="eyebrow">Construcción · Proyectos · Infraestructura</div>
+        <h1>Construimos espacios. Desarrollamos futuro.</h1>
+        <p>Soluciones de construcción para proyectos públicos y privados, con atención al detalle, compromiso y enfoque en cada etapa de la obra.</p>
+        <div class="actions"><a class="btn btn-light" href="https://wa.me/523121693573?text=Hola%2C%20quiero%20solicitar%20informaci%C3%B3n%20sobre%20sus%20servicios." target="_blank" rel="noopener">Solicitar información&nbsp; ↗</a><a class="btn btn-outline" href="#servicios">Conocer servicios</a></div>
+      </div>
+      <div class="hero-art" aria-hidden="true"><div class="blueprint"><div class="bp-grid"><i></i><i></i><i></i><i></i></div><div class="bp-caption">Diseño · Planeación · Construcción</div></div></div>
+    </div>
+  </section>
+  <section id="empresa">
+    <div class="wrap about">
+      <div class="about-panel"><strong>Solidez en cada proyecto. Compromiso en cada detalle.</strong><span>Geodelta Group · Colima, México</span></div>
+      <div class="about-copy"><div class="eyebrow">Quiénes somos</div><h2>Construcción con visión y responsabilidad.</h2><p>En <strong>Geodelta Group</strong> ofrecemos servicios integrales para hacer realidad proyectos de construcción. Atendemos obra pública y privada, desde la planeación y elaboración de planos hasta la ejecución, remodelación y mantenimiento.</p><p>Trabajamos con comunicación clara y enfoque en las necesidades de cada cliente, buscando soluciones funcionales, ordenadas y de calidad.</p></div>
+    </div>
+  </section>
+  <section class="services" id="servicios">
+    <div class="wrap">
+      <div class="section-top"><div class="eyebrow">Lo que hacemos</div><h2>Servicios para cada etapa de tu proyecto.</h2><p>Desde la idea inicial hasta el cuidado de los espacios construidos, ponemos a tu disposición soluciones adaptadas a tus necesidades.</p></div>
+      <div class="cards">
+        <article class="service"><div class="num">01 / OBRA</div><div class="icon">⌂</div><h3>Obra pública y privada</h3><p>Construcción y ejecución de proyectos para instituciones, empresas y particulares.</p></article>
+        <article class="service"><div class="num">02 / DISEÑO</div><div class="icon">⌁</div><h3>Proyectos y planos</h3><p>Desarrollo y representación de proyectos para visualizar y planear cada espacio.</p></article>
+        <article class="service"><div class="num">03 / RENOVACIÓN</div><div class="icon">◇</div><h3>Remodelaciones</h3><p>Renovación y adecuación de espacios para mejorar su funcionalidad y apariencia.</p></article>
+        <article class="service"><div class="num">04 / CUIDADO</div><div class="icon">＋</div><h3>Mantenimiento</h3><p>Trabajos de conservación y mantenimiento para prolongar la vida útil de los inmuebles.</p></article>
+        <article class="service"><div class="num">05 / ASESORÍA</div><div class="icon">▤</div><h3>Planeación de obra</h3><p>Orientación para definir alcances, necesidades y etapas de ejecución.</p></article>
+        <article class="service"><div class="num">06 / ATENCIÓN</div><div class="icon">◎</div><h3>Atención personalizada</h3><p>Seguimiento cercano para comprender los objetivos de cada cliente y proyecto.</p></article>
+      </div>
+    </div>
+  </section>
+  <section id="proceso">
+    <div class="wrap approach">
+      <div class="section-top"><div class="eyebrow">Nuestro enfoque</div><h2>Un proceso claro desde el primer contacto.</h2><p>Creemos que una buena obra comienza con escuchar, planear y mantener una comunicación constante.</p><a class="btn" style="background:var(--ink);color:white;margin-top:18px" href="mailto:geodeltaconstrucciondisenosypr@gmail.com">Escríbenos&nbsp; ↗</a></div>
+      <div class="steps">
+        <div class="step"><b>01</b><div><h3>Escuchamos tu idea</h3><p>Conocemos tus necesidades, objetivos y características del proyecto.</p></div></div>
+        <div class="step"><b>02</b><div><h3>Definimos el alcance</h3><p>Revisamos los requerimientos y planteamos los siguientes pasos.</p></div></div>
+        <div class="step"><b>03</b><div><h3>Planeamos y ejecutamos</h3><p>Coordinamos las actividades de acuerdo con el proyecto y lo acordado.</p></div></div>
+        <div class="step"><b>04</b><div><h3>Damos seguimiento</h3><p>Mantenemos comunicación durante el desarrollo de los trabajos.</p></div></div>
+      </div>
+    </div>
+  </section>
+  <section class="contact" id="contacto">
+    <div class="wrap contact-grid">
+      <div><div class="eyebrow">Hablemos de tu proyecto</div><h2>¿Tienes una obra en mente?</h2><p>Estamos listos para conocer tus necesidades y ayudarte a dar el siguiente paso. Contáctanos para solicitar información o una cotización.</p><a class="btn btn-light" href="https://wa.me/523121693573?text=Hola%2C%20Geodelta%20Group.%20Me%20gustar%C3%ADa%20solicitar%20una%20cotizaci%C3%B3n." target="_blank" rel="noopener">Contactar por WhatsApp&nbsp; ↗</a></div>
+      <div class="contact-items">
+        <a class="contact-item" href="https://wa.me/523121693573" target="_blank" rel="noopener"><span class="symbol">◉</span><span><small>WhatsApp / Teléfono</small><strong>312 169 3573</strong></span></a>
+        <a class="contact-item" href="mailto:geodeltaconstrucciondisenosypr@gmail.com"><span class="symbol">✉</span><span><small>Correo electrónico</small><strong>geodeltaconstrucciondisenosypr@gmail.com</strong></span></a>
+        <div class="contact-item"><span class="symbol">⌖</span><span><small>Ubicación</small><strong>Colima, México</strong></span></div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer><div class="wrap footer-inner"><strong>GEODELTA GROUP</strong><span>Construcción · Proyectos · Infraestructura</span><span>© <span id="year"></span> Geodelta Group. Todos los derechos reservados.</span></div></footer>
+<a class="wa-float" href="https://wa.me/523121693573" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">WhatsApp ↗</a>
+<script>document.getElementById('year').textContent=new Date().getFullYear();function closeMenu(){document.getElementById('nav').classList.remove('open')}</script>
+</body>
+</html>
