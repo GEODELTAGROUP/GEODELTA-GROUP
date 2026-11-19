@@ -1,0 +1,15 @@
+GEODELTA GROUP — SITIO WEB CON LOGOTIPO
+
+Archivos:
+- index.html: página web adaptable a celulares y computadoras.
+- logo-geodelta.png: logotipo proporcionado por Geodelta Group.
+
+PARA ACTUALIZAR EN GITHUB PAGES
+1. Descomprime este ZIP.
+2. Entra a tu repositorio GEODELTAGROUP/geodelta-group.
+3. En la pestaña Code, sube y reemplaza index.html.
+4. También sube logo-geodelta.png en la misma carpeta raíz.
+5. Confirma los cambios con Commit changes.
+6. Espera unos minutos y visita https://geodeltagroup.github.io/geodelta-group/
+
+IMPORTANTE: index.html y logo-geodelta.png deben estar juntos en la carpeta raíz.
